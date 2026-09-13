@@ -4,7 +4,7 @@ Welcome to the **ShopSphere Data Warehouse and Analytics Project** 🚀
 
 This repository showcases a **complete end-to-end data warehousing and analytics build** for a global e-commerce retailer operating two independent sales channels — a legacy website platform and a mobile app.
 
-Built as a **hands-on portfolio project**, it applies core data engineering and analytics practices: Medallion Architecture design, multi-source data integration, data quality management, and SQL-driven insight generation.
+Built as a **hands-on portfolio project**, it applies core data engineering and analytics practices: Medallion Architecture design, multi-source data integration, data quality management, and SQL-driven business intelligence.
 
 ---
 
@@ -121,7 +121,7 @@ Compares promo vs. non-promo orders on AOV, revenue contribution, redemption rat
 ### 5. 💰 $500K Ad Spend Recommendation
 Revenue-proportional budget allocation across channel, geography, device, and product category — calculated directly from the fact table.
 
-📄 **[View Full Insights & Recommendations →](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Exploration%20and%20Analysis/Insights_and_Recommendations.md)**
+📄 **[View Full Insights & Recommendations →](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Analysis%20and%20Insight/Insights_and_Recommendations.md)**
 
 ---
 
@@ -159,8 +159,8 @@ ShopSphere-Data-Warehouse-and-Analytics-Project/
 │   ├── 06.Post Quality Check.sql
 │   └── 07.Full_Pipeline run.sql
 │
-├── Exploration and Analysis/
-│   ├── 08_Analysis_query.sql
+├── Analysis and Insight/
+│   ├── Analysis_query.sql
 │   └── Insights_and_Recommendations.md
 │
 ├── LICENSE
@@ -195,13 +195,13 @@ Error handling and batch timing are logged at every stage.
 - CSV dataset files
 
 **Steps:**
-1. Run [`01_Datawarehouse_Schema_Creation.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/01_Datawarehouse_Schema_Creation.sql) — creates the ShopSphereDW database and three schemas (bronze, silver, gold).
-2. Update the file paths in [`02.Bronze Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/02.Bronze%20Layer_query.sql) to point to your CSV files, then run it to load raw data.
-3. Run [`03.Cleaning text_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/03.Cleaning%20text_query.sql) to profile and identify data quality issues.
-4. Run [`04.Silver Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/04.Silver%20Layer_query.sql), then [`05.Gold_Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/05.Gold_Layer_query.sql) to transform and model the data.
-5. Run [`06.Post Quality Check.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/06.Post%20Quality%20Check.sql) to validate Silver and Gold layer outputs.
-6. **Or** skip steps 2–4 by running [`07.Full_Pipeline run.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/07.Full_Pipeline%20run.sql) to execute the entire pipeline in one go.
-7. Run [`08_Analysis_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Exploration%20and%20Analysis/08_Analysis_query.sql) to generate all analytical reports and insights.
+1. Run [`01_Datawarehouse_Schema_Creation.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/01_Datawarehouse_Schema_Creation.sql) — creates all database objects and schemas
+2. Update the file paths in [`02.Bronze Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/02.Bronze%20Layer_query.sql) to point to your local CSV files
+3. Run [`03.Cleaning text_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/03.Cleaning%20text_query.sql) to profile and identify data quality issues
+4. Run [`04.Silver Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/04.Silver%20Layer_query.sql), then [`05.Gold_Layer_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/05.Gold_Layer_query.sql) to build the cleaned and dimensional layers
+5. Run [`06.Post Quality Check.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/06.Post%20Quality%20Check.sql) to validate Silver and Gold layer record counts
+6. **Or** skip steps 2–4 by running [`07.Full_Pipeline run.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/07.Full_Pipeline%20run.sql) to execute all transforms in sequence
+7. Run [`Analysis_query.sql`](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Analysis%20and%20Insight/Analysis_query.sql) to generate all analytical deliverables (KPIs, RFM, basket analysis, promo effectiveness, budget allocation)
 
 ---
 
@@ -216,14 +216,14 @@ Error handling and batch timing are logged at every stage.
 | Gold Layer | [05.Gold_Layer_query.sql](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/05.Gold_Layer_query.sql) |
 | Post-Load Quality Checks | [06.Post Quality Check.sql](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/06.Post%20Quality%20Check.sql) |
 | Full Pipeline (One-Click) | [07.Full_Pipeline run.sql](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Queries/07.Full_Pipeline%20run.sql) |
-| Analysis Queries | [08_Analysis_query.sql](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Exploration%20and%20Analysis/08_Analysis_query.sql) |
-| Insights & Recommendations | [Insights_and_Recommendations.md](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Exploration%20and%20Analysis/Insights_and_Recommendations.md) |
+| Analysis Queries | [Analysis_query.sql](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Analysis%20and%20Insight/Analysis_query.sql) |
+| Insights & Recommendations | [Insights_and_Recommendations.md](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Analysis%20and%20Insight/Insights_and_Recommendations.md) |
 
 ---
 
 ## 📖 Data Quality Notes
 
-> **Known limitation — mobile app total mismatch:** The `is_total_mismatch` flag fires on a large share of mobile app transactions by design. The app's `gross_total` bakes in a promo discount that doesn't appear as a separate line-item. See the [Insights & Recommendations](https://github.com/babatunde-cp/ShopSphere-Data-Warehouse-and-Analytics-Project/blob/main/Exploration%20and%20Analysis/Insights_and_Recommendations.md) document for full details.
+> **Known limitation — mobile app total mismatch:** The `is_total_mismatch` flag fires on a large share of mobile app transactions by design. The app's `gross_total` bakes in a promo discount that differs from the recalculated line total. Both figures are preserved in Gold for audit and analysis purposes.
 
 ---
 
