@@ -178,5 +178,5 @@ Three high-conviction moves stand out within the $500K:
 
 ---
 
-*Analysis based on 76,685 order lines | January 2023 – December 2024 | ShopSphere E-Commerce*
-*All revenue figures in USD using fixed conversion rates: GBP × 1.27, EUR × 1.08*
+**Analysis based on 76,685 order lines | January 2023 – December 2024 | ShopSphere E-Commerce**
+**All revenue figures in USD using fixed conversion rates: GBP × 1.27, EUR × 1.08**
