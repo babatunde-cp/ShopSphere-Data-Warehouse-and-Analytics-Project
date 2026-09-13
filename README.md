@@ -27,11 +27,11 @@ Built as a **hands-on portfolio project**, it applies core data engineering and 
 
 **Goal:** Turn the warehouse into SQL-driven answers to real business questions.
 
-- **Customer Behaviour** — RFM segmentation across 22,155 unique customers
-- **Product Performance** — Revenue and volume across 80 products in 6 categories
-- **Sales Trends** — Two years of monthly revenue across both channels
-- **Promo Effectiveness** — Performance analysis of promo codes by type and tier
-- **Strategic Recommendation** — Data-backed $500,000 ad spend allocation
+- **Customer Behaviour** - RFM segmentation across 22,155 unique customers
+- **Product Performance** - Revenue and volume across 80 products in 6 categories
+- **Sales Trends** - Two years of monthly revenue across both channels
+- **Promo Effectiveness** - Performance analysis of promo codes by type and tier
+- **Strategic Recommendation** - Data-backed $500,000 ad spend allocation
 
 ---
 
@@ -110,7 +110,7 @@ Applied in the Silver layer:
 Executive-level metrics across Revenue, Volume, Customer, Product, Geography, and Operational Health.
 
 ### 2. 👥 RFM Customer Segmentation
-Scores every registered customer on Recency, Frequency, and Monetary value using `NTILE(5)`. Assigns 9 segment labels — from Champion to Lost — with a full channel breakdown.
+Scores every registered customer on Recency, Frequency, and Monetary value using `NTILE(5)`. Assigns 9 segment labels - from Champion to Lost - with a full channel breakdown.
 
 ### 3. 🛒 Market Basket Analysis
 Finds product pairs most frequently bought together via self-join on website orders. Calculates support, confidence (A→B and B→A), and lift for every product combination.
